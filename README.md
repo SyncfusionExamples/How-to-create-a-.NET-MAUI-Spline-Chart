@@ -1,6 +1,7 @@
 # How-to-create-a-.NET-MAUI-Spline-Chart
 The SplineSeries resembles line series, but instead of connecting the data points with line segments, the data points are connected by smooth bezier curves.
-![.NET MAUI Spline Chart](https://user-images.githubusercontent.com/13678478/137481351-eed5154b-5161-4dd7-9af9-3a08c13fd65b.png)
+
+![.NET MAUI Spline Chart](https://user-images.githubusercontent.com/92786382/192692779-494315cf-efd0-4830-ab83-7c5bce64ad6f.png)
 
 ## Register the handler.
 Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core. For more details refer this link.
