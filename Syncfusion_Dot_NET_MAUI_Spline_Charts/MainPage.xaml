@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+             xmlns:model="clr-namespace:Syncfusion_Dot_NET_MAUI_Spline_Charts"
+             x:Class="Syncfusion_Dot_NET_MAUI_Spline_Charts.MainPage">
+
+    <chart:SfCartesianChart>
+
+        <chart:SfCartesianChart.BindingContext>
+            <model:ViewModel/>
+        </chart:SfCartesianChart.BindingContext>
+
+        <chart:SfCartesianChart.Title>
+            <Label Text="Weather Report" FontSize="20" HorizontalOptions="Center"/>
+        </chart:SfCartesianChart.Title>
+
+        <chart:SfCartesianChart.XAxes>
+            <chart:CategoryAxis ShowMajorGridLines="False" PlotOffsetStart="10" PlotOffsetEnd="30" />
+        </chart:SfCartesianChart.XAxes>
+
+        <chart:SfCartesianChart.YAxes>
+            <chart:NumericalAxis Interval="10"  >
+                <chart:NumericalAxis.LabelStyle>
+                    <chart:ChartAxisLabelStyle LabelFormat= "0.#&#186;C" />
+                </chart:NumericalAxis.LabelStyle>
+                <chart:NumericalAxis.AxisLineStyle>
+                    <chart:ChartLineStyle StrokeWidth="0"/>
+                </chart:NumericalAxis.AxisLineStyle>
+            </chart:NumericalAxis>
+        </chart:SfCartesianChart.YAxes>
+
+        <chart:SplineSeries Label="Height" 
+                    EnableTooltip="True"
+                    ShowDataLabels="True"
+                    ItemsSource="{Binding Data}"
+                    XBindingPath="Name" 
+                    YBindingPath="Height">
+        </chart:SplineSeries>
+    </chart:SfCartesianChart>
+
+</ContentPage>
