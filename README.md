@@ -9,7 +9,6 @@ Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion controls of
 ## Initialize Chart
 Import the SfCartesianChart namespace as shown below.
 
-
 **[XAML]**
 
 ```
